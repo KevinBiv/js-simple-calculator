@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,75 +8,76 @@
     <title>Into to Javascript Functions</title>
 
     <style>
-        form, .card{
+        form,
+        .card {
             display: flex;
         }
-        form{
+
+        form {
             flex-direction: column;
         }
-        input{
+
+        input {
             margin-right: 0.5rem;
             margin-bottom: 0.3rem;
         }
-        .card input{
+
+        .card input {
             padding: 20px;
         }
-        #answer{
+
+        #answer {
             width: 15%;
             padding: 10px 25px;
             border: 1px solid #255;
         }
-        @media screen and (max-width: 768px){
-            #answer{
+
+        @media screen and (max-width: 768px) {
+            #answer {
                 width: 100%;
             }
         }
     </style>
 </head>
+
 <body>
     <h3>simple js calculator</h3>
-<form name="calc">
-    <input type="text" name="answer" id="answer">
-    <div class="card">
-        <input type="button" value="7" 
-        onclick="calc.answer.value +='7'">
-        <input type="button" value="8" 
-        onclick="calc.answer.value +='8'">
-        <input type="button" value="9" 
-        onclick="calc.answer.value +='9'">
-        <input type="button" value="*" 
-        onclick="calc.answer.value +='*'">
-    </div>
-    <div class="card">
-        <input type="button" value="4" 
-        onclick="calc.answer.value +='4'">
-        <input type="button" value="5" 
-        onclick="calc.answer.value +='5'">
-        <input type="button" value="6" 
-        onclick="calc.answer.value +='6'">
-        <input type="button" value="-" 
-        onclick="calc.answer.value +='-'">
-    </div>
-    <div class="card">
-        <input type="button" value="1" 
-        onclick="calc.answer.value +='1'">
-        <input type="button" value="2" 
-        onclick="calc.answer.value +='2'">
-        <input type="button" value="3" 
-        onclick="calc.answer.value +='3'">
-        <input type="button" value="+" 
-        onclick="calc.answer.value +='+'">
-    </div>
-    <div class="card">
-        <input type="button" value="/" 
-        onclick="calc.answer.value +='/'">
-        <input type="button" value="." 
-        onclick="calc.answer.value +='.'">
-        <input type="button" value="=" 
-        onclick="calc.answer.value=eval(calc.answer.value)">
-        <button type="reset">Clear</button>
-    </div>
-</form>
+    <form name="calc">
+        <input type="text" name="answer" id="answer">
+        <div class="card">
+            <input type="button" value="7" onclick="calc.answer.value +='7'">
+            <input type="button" value="8" onclick="calc.answer.value +='8'">
+            <input type="button" value="9" onclick="calc.answer.value +='9'">
+            <input type="button" value="*" onclick="calc.answer.value +='*'">
+            <input type="button" value="sqrt" onclick="squareRoot()">
+            <input type="button" value="1/x" onclick="fraction()">
+        </div>
+        <div class="card">
+            <input type="button" value="4" onclick="calc.answer.value +='4'">
+            <input type="button" value="5" onclick="calc.answer.value +='5'">
+            <input type="button" value="6" onclick="calc.answer.value +='6'">
+            <input type="button" value="-" onclick="calc.answer.value +='-'">
+            <input type="button" value="DEL" onclick="del()">
+            <input type="button" value="+/-" onclick="signToggle()">
+        </div>
+        <div class="card">
+            <input type="button" value="1" onclick="calc.answer.value +='1'">
+            <input type="button" value="2" onclick="calc.answer.value +='2'">
+            <input type="button" value="3" onclick="calc.answer.value +='3'">
+            <input type="button" value="+" onclick="calc.answer.value +='+'">
+            <input type="button" value="%" onclick="percentage()">
+            <input type="button" value="0" onclick="calc.answer.value +='0'">
+        </div>
+        <div class="card">
+            <input type="button" value="/" onclick="calc.answer.value +='/'">
+            <input type="button" value="." onclick="calc.answer.value +='.'">
+            <input type="button" value="=" onclick="calc.answer.value=eval(calc.answer.value)">
+            <button type="reset">Clear</button>
+            <input type="button" value="^2" onclick="power()">
+            <!-- <input type="button" value="()" onclick="parentheses()"> -->
+        </div>
+    </form>
 </body>
+
 </html>
 <script src="script.js"></script>
