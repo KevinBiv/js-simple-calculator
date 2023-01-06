@@ -47,18 +47,30 @@
             height: 100px;
             padding: 10px 25px;
             border: 1px solid #255;
-            font-size: 24px;
+            font-size: 30px;
+            color: #FF014F;
         }
 
-        .card input, .card button {
+        .card input {
             width: 70px;
             height: 70px;
             padding: 10px;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF014F;
         }
 
 
         .clear {
-            flex-grow: 2;
+            /* flex-grow: 2; */
+            width: 150px;
+            height: 60px;
+            position: relative;
+            top: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #FF014F;
         }
 
         @media screen and (max-width: 768px) {
@@ -96,13 +108,13 @@
                 <input type="button" value="3" onclick="calc.answer.value +='3'">
                 <input type="button" value="+" onclick="calc.answer.value +='+'">
                 <input type="button" value="%" onclick="percentage()">
-                <input type="button" value="0" onclick="calc.answer.value +='0'">
+                <input type="button" value="^2" onclick="power()">
             </div>
             <div class="card card1">
-                <input type="button" value="/" onclick="calc.answer.value +='/'">
                 <input type="button" value="." onclick="calc.answer.value +='.'">
+                <input type="button" value="0" onclick="calc.answer.value +='0'">
                 <input type="button" value="=" onclick="calc.answer.value=eval(calc.answer.value)">
-                <input type="button" value="^2" onclick="power()">
+                <input type="button" value="/" onclick="calc.answer.value +='/'">
                 <button type="reset" class="clear">Clear</button>
                 <!-- <input type="button" value="()" onclick="parentheses()"> -->
             </div>
